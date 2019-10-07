@@ -1,0 +1,17 @@
+
+nav {
+  font-family: 'Bungee', cursive;
+  width: 100%;
+  height: 120px;
+  background: hsl(226, 43%, 44%);
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  padding: 1.5em;
+  z-index: 100;
+
+
+
+}
