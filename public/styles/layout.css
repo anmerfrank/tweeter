@@ -17,21 +17,28 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #15142e;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-div {
-  align-content: center;
-}
-
-main {
-  align-self: center;
-  width: 90%;
-  background-color: #545149;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+div {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+  width: 90%;
+  background-color: #15142e;
+  position: relative;
+  margin: auto;
+}
+
+.container {
+  width: 90%;
+  align-content: center;
+}
