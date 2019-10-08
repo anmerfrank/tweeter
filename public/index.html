@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -21,8 +24,7 @@
   </head>
 
   <body>
-     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
-
+  
 
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -45,9 +47,11 @@
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
             <form action="/tweets" method="POST">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
+              <textarea class="input" rows="1" name="text" placeholder="What are you humming about?"></textarea>
+             <div class="footer">
+              <input class= "tweetbtn" type="submit" value="Tweet">
               <span class="counter">140</span>
+            </div>
             </form>
           </section>
 
