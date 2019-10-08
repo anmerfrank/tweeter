@@ -16,8 +16,8 @@ html {
 
 
 body {
-  color: #706f6a;
-  background-color:#342c45;
+  color: #2e2a3a;
+  background-color:#abd3ee;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -33,7 +33,7 @@ div {
 main {
   text-align: center;
   width: 90%;
-  background-color: #342c45;
+  background-color: #abd3ee;
   position: relative;
   margin: auto;
 }
