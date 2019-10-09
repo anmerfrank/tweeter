@@ -67,11 +67,20 @@ const renderTweets = function(tweets) {
     const $form = $('.new-tweet form'); 
     $form.on('submit', function () {
       event.preventDefault();
-      console.log("Button clicked! Tweet submitting!");
-      $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize()})
-        .then(function(res) {
-          loadTweets();
-        });
+
+      // ERROR HANDLING  
+      let tweetInput = $('.input')[0].value.length;
+      if (tweetInput > 140) {
+        alert("Max 140 characters, please!");
+      } else if (tweetInput === 0 || tweetInput === undefined || tweetInput === null) {
+        alert("Please enter a tweet!");
+      } else {
+      // EVERYTHING OK, TWEET POSTING
+        $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize()})
+          .then(function(res) {
+            loadTweets();
+          })
+        };
     });
 
     const loadTweets = function(data) {
