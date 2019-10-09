@@ -42,3 +42,9 @@ main {
   width: 90%;
   align-content: center;
 }
+
+.tweetContainer {
+  background-color: #eeeeee;
+  width: 90%;
+  margin: auto;
+}

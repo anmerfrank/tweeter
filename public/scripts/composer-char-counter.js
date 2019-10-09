@@ -3,12 +3,13 @@ $(document).ready(function() {
     const text = $(this).val();
     const charCount = text.length;
     const remainingChars = 140-charCount;
-    const currentCount = $(this).parent().children('.footer').children('#counter').text(remainingChars)
-
-    console.log(currentCount);
+    $(this).parent().children('.footer').children('#counter').text(remainingChars)
 
     if (remainingChars < 0) {
       document.getElementById("counter").style.color = "magenta";
+    }
+    if (remainingChars > 0) {
+      document.getElementById("counter").style.color = "4d014d";
     }
   });
 

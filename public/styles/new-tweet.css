@@ -35,7 +35,7 @@ new-tweet {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid black 5px;
+  border-bottom: solid #354246 5px;
   background: none;
 }
 
@@ -45,4 +45,65 @@ container {
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
   border-bottom: 5px solid red;
+}
+
+
+
+.tweetheader {
+  display: flex;
+  font-weight: normal;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: auto;
+  color: #2b0d2f;
+  height: 50px;
+  padding: 10px;
+
+}
+
+.tweet-body{
+  background-color: #f8f8f8;
+  color: #2b0d2f;
+  font-size: 25px;
+  font-weight: normal;
+
+}
+
+
+.tweetfooter{
+  display: flex;
+  color: #2b0d2f;
+  font-weight: normal;
+  font-size: 15px;
+  border-top: solid #354246 2px;
+  padding: 10px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.tweetContainer {
+  background-color: #fbfbfb;
+  width: 90%;
+  margin: auto;
+  border-top: solid #354246 3px;
+  border-left: solid #354246 3px;
+  border-right: solid #354246 3px;
+  border-bottom: solid #354246 3px;
+  box-shadow: black;
+  transition: box-shadow;
+  
+}
+
+
+article {
+  background-color: #fbfbfb;
+  font-weight: bold
+}
+
+article:hover {
+  border: solid 1px #CCC;
+  -moz-box-shadow: 5px 5px 0px #999;
+  -webkit-box-shadow: 5px 5px 0px #999;
+  box-shadow: 5px 5px 0px #999;
+  font-weight: 400
 }
