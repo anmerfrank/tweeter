@@ -16,15 +16,3 @@ $(document).ready(function() {
   });
 
 
-
-// $('.container'). // count down in this class.
-
-// TO MAKE THE TWEETS In a top-down list: 
-
-// $(document).ready(() = {
-// $('#my-button').click(() => {
-// const text = $('#my-input').val();
-// const listItem = $("<li>").text(text);
-// $("#list-container").prepend($listItem);
-// ));
-// });
