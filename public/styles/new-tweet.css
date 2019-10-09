@@ -3,6 +3,7 @@ new-tweet {
   border-bottom-color: rgb(39, 3, 44);
   border-bottom-width: 5px;
   justify-content: space-between;
+  
 }
 
 .footer {
@@ -19,6 +20,14 @@ new-tweet {
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
   color: #4d014d;
+}
+
+#countOK {
+  color: #041a18
+}
+
+#countOver {
+  color: red;
 }
 
 .tweetbtn {
@@ -39,26 +48,18 @@ new-tweet {
   background: none;
 }
 
-container {
+#usericon {
   display: flex;
-  width: 40%;
-  justify-content: space-between;
-  font-family: "Bungee", sans-serif;
-  border-bottom: 5px solid red;
+  align-items: center;
 }
-
-
 
 .tweetheader {
   display: flex;
   font-weight: normal;
   font-size: 20px;
   justify-content: space-between;
-  margin: auto;
   color: #2b0d2f;
-  height: 50px;
-  padding: 10px;
-
+  align-items: center;
 }
 
 .tweet-body{
@@ -66,7 +67,6 @@ container {
   color: #2b0d2f;
   font-size: 25px;
   font-weight: normal;
-
 }
 
 
@@ -75,35 +75,53 @@ container {
   color: #2b0d2f;
   font-weight: normal;
   font-size: 15px;
-  border-top: solid #354246 2px;
-  padding: 10px;
+  border-top: solid #354246 3px;
+  padding: 5px;
   justify-content: space-between;
   margin: auto;
+  margin-top: 25px;
 }
 
 .tweetContainer {
   background-color: #fbfbfb;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  border-top: solid #354246 3px;
-  border-left: solid #354246 3px;
-  border-right: solid #354246 3px;
-  border-bottom: solid #354246 3px;
+  border-top: solid #354246 4px;
+  border-left: solid #354246 4px;
+  border-right: solid #354246 4px;
+  border-bottom: solid #354246 4px;
   box-shadow: black;
   transition: box-shadow;
+ 
   
 }
 
 
 article {
+  padding: 10px;
+  width: 100%;
   background-color: #fbfbfb;
-  font-weight: bold
+  font-weight: bold;
+  justify-content: space-between;
 }
 
 article:hover {
-  border: solid 1px #CCC;
-  -moz-box-shadow: 5px 5px 0px #999;
-  -webkit-box-shadow: 5px 5px 0px #999;
-  box-shadow: 5px 5px 0px #999;
-  font-weight: 400
+  -moz-box-shadow: 5px 5px 0px #313131;
+  -webkit-box-shadow: 5px 5px 0px #313131;
+  box-shadow: 5px 5px 0px #313131;
+  font-weight: unset;
 }
+
+article .username {
+display:none;
+}
+
+article:hover .username {
+  display: initial;
+  color: grey;
+}
+
+img {
+  padding: 10px;
+}
+

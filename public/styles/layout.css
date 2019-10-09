@@ -43,8 +43,6 @@ main {
   align-content: center;
 }
 
-.tweetContainer {
-  background-color: #eeeeee;
-  width: 90%;
-  margin: auto;
+span {
+  vertical-align: text-top;
 }
