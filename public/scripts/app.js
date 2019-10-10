@@ -63,11 +63,13 @@ const escape =  function(str) {
         $('#error140').hide;
       } else {
       // EVERYTHING OK, TWEET POSTING
+   
         $("#error140").slideUp()
         $('#zeroChars').slideUp();
         $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize()})
           .then(function(res) {
             loadTweets();
+            $('.input').focus().val("");
           })
         };
     });
@@ -79,7 +81,6 @@ const escape =  function(str) {
         renderTweets(res);
       })
     };
-
 
 loadTweets();
 renderTweets(data);

@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -16,15 +17,11 @@ html {
 
 
 body {
-  color: #403f44;
-  background-color:#d2edff;
+  color: #0f3624;
+  background-color:#438f6f;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 div {
   text-align: center;
@@ -33,7 +30,7 @@ div {
 main {
   text-align: center;
   width: 90%;
-  background-color: #d2edff;
+  background-color: #438f6f;
   position: relative;
   margin: auto;
 }
@@ -47,4 +44,30 @@ main {
 
 span {
   vertical-align: text-top;
+}
+
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .containAll {
+    display: flex;
+    flex-direction: row;
+  }
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+  }
+  .rightColumn {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+  }
 }

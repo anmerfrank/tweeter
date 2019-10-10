@@ -8,6 +8,7 @@ article {
   border-radius: 15px;
   border: solid #313131 2px; 
   margin-bottom: 15px;
+  text-align: center;
 }
 
 article:hover {
@@ -42,25 +43,24 @@ article .tweetheader {
   font-weight: normal;
   font-size: 20px;
   justify-content: space-between;
-  color: #2b0d2f;
+  color: #001f1d;
 }
 
 article .tweet-body{
   background-color: #f8f8f8;
-  color: #2b0d2f;
+  color: #001f1d;
   font-size: 25px;
-  font-weight: normal;
-  margin-bottom: 25px;
+  align-items: center; 
 }
 
 
 article .tweetfooter{
   display: flex;
-  color: #2a182c;
+  color: #001f1d;
   font-weight: normal;
   font-size: 15px;
   border-top: solid #354246 1px;
-  padding: 5px;
+  padding: 8px;
   justify-content: space-between;
   margin: auto;
 

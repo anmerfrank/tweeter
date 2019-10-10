@@ -1,7 +1,7 @@
 .siteheader {
-  background-color: #52ba8b;
+  background-color: #082e24;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  color: #FFFFFF;
+  color: rgb(182, 235, 217);
   position: relative;
   height: 400px;
   width: 100%;
@@ -13,6 +13,7 @@
 
 h2 {
   font-weight: normal;
+  color: white;
 }
 
 .profilepic {
