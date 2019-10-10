@@ -3,7 +3,7 @@ nav {
   font-family: 'Bungee', cursive;
   width: 100%;
   height: 120px;
-  background-color: #003d2e;
+  background-color: transparent;
   color: #FFFFFF;
   position: fixed;
   top: 0;
@@ -17,7 +17,7 @@ nav {
 
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
-  .nav{
+  nav{
   background-color: #003d2e;
   }
 }
@@ -46,7 +46,7 @@ nav {
 }
 
 #navarrow {
-  color: rgb(30, 146, 82);
+  color: #41e78c;
   border: none;
   padding-bottom: 5px;
   transition: all 0.5s;
