@@ -25,15 +25,21 @@ const escape =  function(str) {
   return div.innerHTML;
   }
 
+  
 
   const createTweetElement = function(tweet) {
+    let timeStart = Date.now();
+    let millis = Date.now() - tweet.created_at;
+    let dateStamp = (millis / (60*60*24*1000))
+    let totalDate = Math.round(dateStamp);
+
     const $tweets = (
      `<article class="tweet-body">
        <header class="tweetheader">
         <span id="usericon"><img src="${tweet.user.avatars}"> ${tweet.user.name} </span><span class="username">${tweet.user.handle}</span>
       </header>
       ${escape(tweet.content.text)}
-      <footer class="tweetfooter"><h8>${tweet.created_at}</h8><h8>Lots of icons here</h8></footer>
+      <footer class="tweetfooter"><h8>${totalDate} days ago</h8><h8>Lots of icons here</h8></footer>
     </article>`
     ) 
     return $tweets;
