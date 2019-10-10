@@ -4,30 +4,26 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
  // TWEET CREATION CODE
-
 
 
 $(document).ready(() => {
   
-const data = [
-
-]
+const data = [];
 
 const renderTweets = function(tweets) {
   $('.tweet-body').empty();
   for (let tweet of tweets) {
     let output = createTweetElement(tweet);
     $(`.tweetContainer`).prepend(output); 
+    }
   }
-}
 
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+  }
 
 
   const createTweetElement = function(tweet) {
@@ -57,6 +53,12 @@ const escape =  function(str) {
       // let tweetValue = $('.input')[0].value.text();
 
       // ERROR HANDLING  
+      const errorAlert = function(errorData) {
+        
+      }
+
+
+
       let tweetInput = $('.input')[0].value.length;
       if (tweetInput > 140) {
         alert("Max 140 characters, please!");
@@ -76,8 +78,19 @@ const escape =  function(str) {
       $.ajax({url: '/tweets',  method: 'GET'})
       .then(function(res) {
         renderTweets(res);
-      
-    })
+      })
     };
   });
+  
+  // NAVIGATION DROP-BOX CODE
+
+  $('#navbutton').on("click", function () {
+    $(".new-tweet").slideToggle({
+    })
+    $(".input").focus();
+  })
+
 });
+
+
+

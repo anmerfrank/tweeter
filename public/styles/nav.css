@@ -11,7 +11,53 @@ nav {
   margin: auto;
   padding: 1.5em;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
 
+.rightnav {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
+#navbutton {
+  color:white;
+  background-color: transparent;
+  transition: all 0.5s;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+}
 
+#navbutton:hover {
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#navarrow {
+  color: gold;
+  border: none;
+  padding-bottom: 5px;
+  transition: all 0.5s;
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }

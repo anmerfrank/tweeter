@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-body.css" type="text/css" />
 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/2a19886d7c.js" crossorigin="anonymous"></script>
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -23,11 +26,12 @@
   </head>
 
   <body>
-  
 
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span>tweeter</span> <span class="rightnav"><button id="navbutton"><b>Write</b> a new tweet <br><i id="navarrow" class="fas fa-angle-double-down"></i> </button>
+         </span>
+      </span>
     </nav>
 
     <header class="siteheader">
@@ -45,6 +49,7 @@
 
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
+            
             <form action="/tweets" method="POST">
               <textarea class="input" rows="1" name="text" placeholder="What are you humming about?"></textarea>
               <div class="footer">
