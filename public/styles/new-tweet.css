@@ -4,8 +4,36 @@
   border-bottom-width: 5px;
   justify-content: space-between;
   display: none;
+  align-items: center;
 }
 
+#error140 {
+  margin: auto;
+  color: red;
+  width: 40%;
+  text-align: center;
+  border-top: solid darkred 3px;
+  border-bottom: solid darkred 3px;
+  border-left: solid darkred 3px;
+  border-right:solid darkred 3px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: none;
+}
+
+#zeroChars {
+  margin: auto;
+  color: green;
+  width: 40%;
+  align-content: center;
+  border-top: solid green 3px;
+  border-bottom: solid green 3px;
+  border-left: solid green 3px;
+  border-right:solid green 3px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: none;
+}
 
 .footer {
   width: 40%;
@@ -26,9 +54,7 @@
   color: #041a18
 }
 
-#countOver {
-  color: red;
-}
+
 
 .tweetbtn {
   align-content: left;
@@ -40,7 +66,7 @@
 }
 
 .input {
-  width: 50%;
+  width: 60%;
   height: auto;
   border-top: none;
   border-left: none;
@@ -50,6 +76,7 @@
 }
 
 .errorMsg {
+  margin: auto;
   color: red;
   font-weight: bold;
   border-radius: 25px;

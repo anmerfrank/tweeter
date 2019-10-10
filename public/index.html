@@ -49,7 +49,8 @@
 
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            
+            <div id="error140" align="center"><i class="fas fa-exclamation-triangle"></i> Maximum 140 characters, please!</div>
+            <div id="zeroChars" align="center"> <i class="fas fa-exclamation-triangle"></i> Enter more than 0 characters</div>
             <form action="/tweets" method="POST">
               <textarea class="input" rows="1" name="text" placeholder="What are you humming about?"></textarea>
               <div class="footer">

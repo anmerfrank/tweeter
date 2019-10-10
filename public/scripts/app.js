@@ -25,7 +25,6 @@ const escape =  function(str) {
   return div.innerHTML;
   }
 
-  
 
   const createTweetElement = function(tweet) {
     let timeStart = Date.now();
@@ -39,7 +38,7 @@ const escape =  function(str) {
         <span id="usericon"><img src="${tweet.user.avatars}"> ${tweet.user.name} </span><span class="username">${tweet.user.handle}</span>
       </header>
       ${escape(tweet.content.text)}
-      <footer class="tweetfooter"><h8>${totalDate} days ago</h8><h8>Lots of icons here</h8></footer>
+      <footer class="tweetfooter"><h8>${totalDate} days ago</h8><div class="icons"><i class="fab fa-font-awesome-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div></footer>
     </article>`
     ) 
     return $tweets;
@@ -55,23 +54,17 @@ const escape =  function(str) {
     $form.on('submit', function () {
       event.preventDefault();
 
-      // // ESCAPE MALICIOUS TEXT
-      // let tweetValue = $('.input')[0].value.text();
-
-      // ERROR HANDLING  
-      const errorAlert = function(errorData) {
-        
-      }
-
-
 
       let tweetInput = $('.input')[0].value.length;
       if (tweetInput > 140) {
-        alert("Max 140 characters, please!");
+        $('#error140').slideDown();
       } else if (tweetInput === 0 || tweetInput === undefined || tweetInput === null) {
-        alert("Please enter a tweet!");
+        $('#zeroChars').slideDown();
+        $('#error140').hide;
       } else {
       // EVERYTHING OK, TWEET POSTING
+        $("#error140").slideUp()
+        $('#zeroChars').slideUp();
         $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize()})
           .then(function(res) {
             loadTweets();
@@ -86,8 +79,14 @@ const escape =  function(str) {
         renderTweets(res);
       })
     };
+
+
+loadTweets();
+renderTweets(data);
   });
-  
+
+
+
   // NAVIGATION DROP-BOX CODE
 
   $('#navbutton').on("click", function () {
@@ -96,7 +95,5 @@ const escape =  function(str) {
     $(".input").focus();
   })
 
+
 });
-
-
-

@@ -41,6 +41,8 @@ main {
 .container {
   width: 90%;
   align-content: center;
+  text-align: center;
+  margin: auto;
 }
 
 span {
