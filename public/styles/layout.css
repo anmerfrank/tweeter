@@ -11,10 +11,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 
 body {
   color: #0f3624;
@@ -29,7 +25,7 @@ div {
 
 main {
   text-align: center;
-  width: 90%;
+  width: 90vw;
   background-color: #438f6f;
   position: relative;
   margin: auto;
@@ -50,21 +46,27 @@ span {
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-  }
-
   .containAll {
     display: flex;
     flex-direction: row;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding: 50px 25px;
+    
+  }
+
   .leftColumn {
     display: flex;
     flex-direction: column;
     width: 30vw;
   }
+  
   .rightColumn {
     display: flex;
     flex-direction: column;

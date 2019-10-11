@@ -6,13 +6,12 @@ $(document).ready(function() {
     $(this).parent().children('.footer').children('#counter').text(remainingChars)
 
     if (remainingChars < 0) {
-      document.getElementById("counter").style.color = "magenta";
+      document.getElementById("counter").style.color = "#6d0000";
     }
     if (remainingChars > 0) {
-      document.getElementById("counter").style.color = "#4d014d";
+      document.getElementById("counter").style.color = "#0f3624";
     }
   });
-
-  });
+});
 
 
