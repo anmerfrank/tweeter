@@ -29,6 +29,6 @@ h2 {
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
   .paddingDown{
-    padding-top: 120px;
+    padding-top: 80px;
   }
 }
