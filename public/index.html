@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-body.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2a19886d7c.js" crossorigin="anonymous"></script>
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-body.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/helpers.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  
-  </head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 
-  <body>
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2a19886d7c.js" crossorigin="anonymous"></script>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span> <span class="rightnav"><button id="navbutton"><b>Write</b> a new tweet <br><i id="navarrow" class="fas fa-angle-double-down"></i> </button>
-         </span>
-      </span>
-    </nav>
-    <div class="containAll">
-  
-      <div class="leftColumn">
-        <header class="siteheader">
-          <div>
-              <img class="profilepic" src="/images/profile-hex.png"> 
-          </div>
-          <br>
-          <div>
-              <h2><b>Anne</b> Franklin</h2>
-          </div>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span> <span class="rightnav"><button id="navbutton"><b>Write</b> a new tweet <br><i id="navarrow"
+          class="fas fa-angle-double-down"></i> </button>
+    </span>
+    </span>
+  </nav>
+  <div class="containAll">
+    <!-- Header and profile pic -->
+    <div class="leftColumn">
+      <header class="siteheader">
+        <div>
+          <img class="profilepic" src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2><b>Anne</b> Franklin</h2>
+        </div>
       </header>
     </div>
-    <div class = "paddingDown"> 
-    <!-- Page-specific (main) content here -->
-    <div class="rightColumn">
-    <main class="container">
+    <div class="paddingDown">
+      <!-- Page-specific (main) content here -->
+      <div class="rightColumn">
+        <main class="container">
 
-        <section class="new-tweet">
+          <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <div id="error140" align="center"><i class="fas fa-exclamation-triangle"></i> Maximum 140 characters, please!</div>
-            <div id="zeroChars" align="center"> <i class="fas fa-exclamation-triangle"></i> Enter more than 0 characters</div>
+            <div id="error140" align="center"><i class="fas fa-exclamation-triangle"></i> Maximum 140 characters,
+              please!</div>
+            <div id="zeroChars" align="center"> <i class="fas fa-exclamation-triangle"></i> Enter more than 0 characters
+            </div>
             <form action="/tweets" method="POST">
               <textarea class="input" rows="1" name="text" placeholder="What are you humming about?"></textarea>
               <div class="footer">
-                <input class= "tweetbtn" type="submit" value="Tweet">
+                <input class="tweetbtn" type="submit" value="Tweet">
                 <span id="counter">140</span>
-            </div>
+              </div>
             </form>
           </section>
           <br>
           <br>
-          <section class="tweetContainer"> 
+          <section class="tweetContainer">
           </section>
-    </main>
+        </main>
+      </div>
     </div>
   </div>
-</div>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </body>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</body>
+
 </html>
