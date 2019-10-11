@@ -13,3 +13,9 @@ Tweeter is a simple, single-page Twitter clone. This is a project from my Lighth
 
 - Express
 - Node 5.10.x or above
+
+
+## Screenshots
+
+!["Screenshot of desktop version"](https://github.com/anmerfrank/tinyapp/blob/master/docs/URLsList.jpg)
+!["Screenshot - Responsive design for screens smaller than 1024px"](https://github.com/anmerfrank/tweeter/blob/master/public/images/Screenshot-CompactDesign.jpg)
