@@ -1,13 +1,15 @@
 .siteheader {
+  display: flex;
+  flex-direction: column;
   background-color: #082e24;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   color: rgb(182, 235, 217);
   position: relative;
   height: 400px;
   width: 100%;
-  align-content: center;
+  vertical-align: top;
   text-align: center;
-  margin: auto;
+
 }
 
 h2 {

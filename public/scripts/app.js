@@ -18,37 +18,38 @@ $(document).ready(() => {
 
   const data = [];
 
-  
+
   loadTweets();
 
   // POSTING A TWEET
-  
-    const $form = $('.new-tweet form');
-    $form.on('submit', function () {
-      event.preventDefault();
 
-      // ERROR CHECKING - CHARACTER COUNT
+  const $form = $('.new-tweet form');
+  $form.on('submit', function () {
+    event.preventDefault();
 
-      let tweetInput = $('.input')[0].value.length;
-      if (tweetInput > 140) {
-        $('#error140').slideDown();
-      } else if (tweetInput === 0 || tweetInput === undefined || tweetInput === null) {
-        $('#zeroChars').slideDown();
-        $('#error140').hide;
-      } else {
+    // ERROR CHECKING - CHARACTER COUNT
 
-        // EVERYTHING OK, TWEET POSTING
+    let tweetInput = $('.input')[0].value.length;
+    if (tweetInput > 140) {
+      $('#error140').slideDown();
+    } else if (tweetInput === 0 || tweetInput === undefined || tweetInput === null) {
+      $('#zeroChars').slideDown();
+      $('#error140').hide;
+    } else {
 
-        $("#error140").slideUp()
-        $('#zeroChars').slideUp();
-        $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize() })
-          .then(function (res) {
-            loadTweets();
-            $('.input').focus().val("");
+      // EVERYTHING OK, TWEET POSTING
+
+      $("#error140").slideUp()
+      $('#zeroChars').slideUp();
+      $.ajax({ url: '/tweets', method: 'POST', data: $form.serialize() })
+        .then(function (res) {
+          $('.input').focus().val("");
+          $('.input').parent().children('.footer').children('#counter').text(140)
+          loadTweets();
         })
-      }
-    });
+    }
+  });
 
-    renderTweets(data);
-    
+  renderTweets(data);
+
 });

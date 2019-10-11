@@ -1,19 +1,19 @@
 
 
+const renderTweets = function (tweets) {
+  $('.tweetContainer').empty();
+  for (let tweet of tweets) {
+    let output = createTweetElement(tweet);
+    $(`.tweetContainer`).prepend(output);
+  }
+};
+
 const loadTweets = function (data) {
   $.ajax({ url: '/tweets', method: 'GET' })
     .then(function (res) {
       renderTweets(res);
     })
 };
-
-const renderTweets = function (tweets) {
-  $('.tweet-body').empty();
-  for (let tweet of tweets) {
-    let output = createTweetElement(tweet);
-    $(`.tweetContainer`).prepend(output);
-  }
-}
 
 const escape = function (str) {
   let div = document.createElement('div');
@@ -38,5 +38,3 @@ const createTweetElement = function (tweet) {
   )
   return tweetTemplate;
 }
-
-module.exports = { loadTweets, renderTweets, escape, createTweetElement };

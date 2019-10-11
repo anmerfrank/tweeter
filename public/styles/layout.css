@@ -49,6 +49,7 @@ span {
   .containAll {
     display: flex;
     flex-direction: row;
+    vertical-align: top;
   }
 
   .container {
@@ -58,13 +59,14 @@ span {
     padding-left: 50px;
     padding-right: 50px;
     padding: 50px 25px;
-    
+
   }
 
   .leftColumn {
+    margin-top: 120px;
+    width: 30vw;
     display: flex;
     flex-direction: column;
-    width: 30vw;
   }
   
   .rightColumn {
